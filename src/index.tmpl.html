@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>企业工资管理系统</title>
+	</head>
+	<body>
+		<div id='root'>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+    (function () {
+        var docEl = document.documentElement,
+        /*判断是移动端缩放还是pc端页面缩放*/
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth ||clientWidth<=920) return;
+                docEl.style.fontSize = 40 * (clientWidth / 1349) + 'px';/*1rem等于40px*/
+            };
+        if (!document.addEventListener) return;
+        window.addEventListener(resizeEvt, recalc, false);
+        document.addEventListener('DOMContentLoaded', recalc, false);
+    })();
+</script>

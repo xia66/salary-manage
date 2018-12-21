@@ -1,0 +1,23 @@
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body {width:100%;font: normal 100% Helvetica, Arial, sans-serif; }
+html,body{
+	height:100%;
+	/*使用max-width限制最大宽度，这样就不会太难看*/
+}
+html{
+    /*这个页面的宽度为小于920的时候会出现布局问题，所以判断是否在pc端让最小宽度为920px*/
+    /*因为html的font-size最小为12，而20 * (clientWidth / 1349)太小*/
+    min-width: 920px !important;
+}
+body{
+	font-size: 14px;
+}
